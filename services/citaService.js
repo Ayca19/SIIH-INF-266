@@ -6,6 +6,7 @@
 //  - Bloquea horarios ocupados o fechas/horas pasadas.
 //  - Deja estado visible: la cita nace en 'pendiente'.
 // ============================================================
+import { enviarNotificacion } from './notificacionService.js'; 
 import {
   obtenerEspecialidades,
   obtenerMedicosPorEspecialidad,
