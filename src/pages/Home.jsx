@@ -42,6 +42,11 @@ export default function Home() {
             <button className="siih-button" style={{ backgroundColor: '#3b82f6' }}>Ver agenda del médico</button>
           </Link>
         </div>
+        <div style={{ marginTop: '12px' }}>
+          <Link to="/paciente/registro">
+            <button className="siih-button">Registrar Atencion Medica </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

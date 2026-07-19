@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#edf3f9;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.siih-container{
+
+    max-width:1000px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+}
+
+.siih-header{
+
+    background:linear-gradient(135deg,#0d6efd,#0b4ea2);
+
+    color:white;
+
+    padding:35px;
+
+}
+
+.siih-header h1{
+
+    font-size:32px;
+
+    margin-bottom:8px;
+
+}
+
+.siih-header p{
+
+    font-size:16px;
+
+    opacity:.9;
+
+}
+
+.siih-body{
+
+    padding:35px;
+
+}
+
+.siih-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:20px;
+
+}
+
+.siih-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.siih-field label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#333;
+
+}
+
+.siih-field input,
+
+.siih-field select{
+
+    padding:13px;
+
+    border:1px solid #cfd8dc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    background:white;
+
+}
+
+.siih-field input:focus,
+
+.siih-field select:focus{
+
+    outline:none;
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 8px rgba(13,110,253,.25);
+
+}
+
+.siih-field input::placeholder{
+
+    color:#999;
+
+}
+
+.siih-button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-top:15px;
+
+    transition:.3s;
+
+}
+
+.siih-button:hover{
+
+    background:#084298;
+
+}
+
+.siih-button:disabled{
+
+    background:#90b4ec;
+
+    cursor:not-allowed;
+
+}
+
+.siih-alert{
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.siih-alert-success{
+
+    background:#d1e7dd;
+
+    color:#0f5132;
+
+}
+
+.siih-alert-error{
+
+    background:#f8d7da;
+
+    color:#842029;
+
+}
+
+.siih-error{
+
+    color:#dc3545;
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+@media(max-width:768px){
+
+.siih-row{
+
+grid-template-columns:1fr;
+
+}
+
+.siih-container{
+
+margin:15px;
+
+}
+
+.siih-body{
+
+padding:20px;
+
+}
+
+.siih-header{
+
+text-align:center;
+
+}
+
+.siih-header h1{
+
+font-size:25px;
+
+}
+
+}

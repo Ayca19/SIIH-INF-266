@@ -8,12 +8,16 @@ import RegistroPaciente from './pages/paciente/RegistroPaciente.jsx';
 import SolicitarCitaPage from './pages/paciente/SolicitarCitaPage.jsx';
 import GestionAdmision from './pages/enfermeria/GestionAdmision.jsx';
 import RegistroSignosVitales from './pages/enfermeria/RegistroSignosVitales.jsx';
+<<<<<<< HEAD
+import RegistrarConsulta from './pages/RegistrarConsulta.jsx';
+=======
 import GestionPacientesEnfermeria from './pages/enfermeria/GestionPacientesEnfermeria.jsx';
 import GestionConsultasMedico from './pages/medico/GestionConsultasMedico.jsx';
 import SignosVitalesMedico from './pages/medico/SignosVitalesMedico.jsx';
 import PacienteDashboard from './pages/paciente/PacienteDashboard.jsx';
 import MiPerfil from './pages/paciente/MiPerfil.jsx';
 import MisCitas from './pages/paciente/MisCitas.jsx';
+>>>>>>> e7ac5cdc8f037a6b466c86f03044530c07629adb
 
 function App() {
   return (
@@ -21,6 +25,15 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/paciente/registro" element={<RegistroPaciente />} />
+<<<<<<< HEAD
+        <Route path="/paciente/cita" element={<SolicitarCitaPage />} />
+        <Route path="/enfermeria/admisiones" element={<GestionAdmision />} />
+        <Route path="/enfermeria/signos-vitales" element={<RegistroSignosVitales />} />
+        <Route
+  path="/medico/consulta"
+  element={<RegistrarConsulta />}
+/>
+=======
 
         <Route element={<ProtectedLayout />}>
           <Route
@@ -86,6 +99,7 @@ function App() {
         </Route>
 
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
+>>>>>>> e7ac5cdc8f037a6b466c86f03044530c07629adb
       </Routes>
     </BrowserRouter>
   );
