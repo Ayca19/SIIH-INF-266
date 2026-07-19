@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
+
 // Inicializamos Supabase directamente en el componente
 // (Lo ideal a futuro es tener esto en un archivo separado, pero así funcionará perfecto ahora)
 

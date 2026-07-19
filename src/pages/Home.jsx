@@ -35,6 +35,11 @@ export default function Home() {
             <button className="siih-button">Registrar signos vitales</button>
           </Link>
         </div>
+        <div style={{ marginTop: '12px' }}>
+          <Link to="/paciente/registro">
+            <button className="siih-button">Registrar Atencion Medica </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

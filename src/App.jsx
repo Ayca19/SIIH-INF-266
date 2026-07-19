@@ -11,6 +11,7 @@ import RegistroPaciente from './pages/paciente/RegistroPaciente.jsx';
 import SolicitarCitaPage from './pages/paciente/SolicitarCitaPage.jsx';
 import GestionAdmision from './pages/enfermeria/GestionAdmision.jsx';
 import RegistroSignosVitales from './pages/enfermeria/RegistroSignosVitales.jsx';
+import RegistrarConsulta from './pages/RegistrarConsulta.jsx';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route path="/paciente/cita" element={<SolicitarCitaPage />} />
         <Route path="/enfermeria/admisiones" element={<GestionAdmision />} />
         <Route path="/enfermeria/signos-vitales" element={<RegistroSignosVitales />} />
+        <Route
+  path="/medico/consulta"
+  element={<RegistrarConsulta />}
+/>
       </Routes>
     </BrowserRouter>
   );
