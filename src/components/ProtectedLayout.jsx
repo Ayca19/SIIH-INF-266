@@ -57,6 +57,7 @@ const navPorRol = {
     { to: '/admin/usuarios', label: 'Usuarios', icono: IconoUsers },
     { to: '/admin/pacientes', label: 'Pacientes', icono: IconoBuildingHospital },
     { to: '/admin/citas', label: 'Citas', icono: IconoCalendar },
+    { to: '/admin/facultades', label: 'Facultades / Áreas', icono: IconoArchiveBox },
     { to: '/admin/admisiones', label: 'Admisiones', icono: IconoClipboardDocument },
     { to: '/admin/signos-vitales', label: 'Signos vitales', icono: IconoHeart },
     { to: '/admin/catalogo', label: 'Catálogo', icono: IconoCog },

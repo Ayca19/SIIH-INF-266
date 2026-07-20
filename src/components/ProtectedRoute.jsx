@@ -20,6 +20,7 @@ const rolesPermitidos = {
   '/admin/usuarios': ['administrativo'],
   '/admin/pacientes': ['administrativo'],
   '/admin/citas': ['administrativo'],
+  '/admin/facultades': ['administrativo'],
   '/admin/admisiones': ['administrativo'],
   '/admin/signos-vitales': ['administrativo'],
   '/admin/configuracion': ['administrativo'],
