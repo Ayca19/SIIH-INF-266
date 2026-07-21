@@ -148,5 +148,39 @@ ejecutar en terminal: vercel dev
 - La revisión de caducidad funciona bajo demanda mediante un endpoint para facilitar pruebas locales sin requerir CRON Jobs por el momento.
 - Requiere `vercel dev` para probarse en local (Vite solo no ejecuta `/api`).
 
+## Issue Nro 16: Carga de resultados de laboratorio
+
+Instalar dependencias necesarias (si aplica) y asegurar que la columna `archivo_resultado` esté activa en la tabla `analisis_laboratorio` de Supabase.
+No olvidar ejecutar `npm run server` primero.
+Ejecutar en terminal: `vercel dev`
+
+**Como** técnico de laboratorio, **quiero** subir el resultado directamente al sistema para que el médico no espere el papel **para** adjuntar resultados digitales (PDF/imagen/texto), vincularlos a la solicitud y permitir su consulta y descarga inmediata.
+
+- **Issue:** [#16](https://github.com/Ayca19/SIIH-INF-266/issues/16)
+- **Depende de:** Solicitud de análisis de laboratorio y Gestión de Consultas Médicas
+- **Criterio de aceptación:** Adjunta resultados digitales (PDF/imagen/texto), los vincula a la solicitud y permite su consulta y descarga desde la vista del médico tratante.
+
+### Flujo
+
+1. El técnico de laboratorio accede a la gestión de análisis y edita o completa una solicitud pendiente.
+2. Sube el archivo digital del resultado (PDF o imagen), el cual se almacena de forma segura en el bucket de Supabase Storage (`laboratorio`).
+3. El frontend genera la URL pública del archivo y la envía junto con el payload de actualización (`archivo_resultado`).
+4. El backend procesa la petición mediante `actualizarAnalisisLaboratorio` e impacta la base de datos registrando el enlace permanente.
+5. El médico tratante visualiza la solicitud del paciente y accede al botón dinámico **"Ver documento de laboratorio"** para consultar o descargar el archivo adjunto al instante.
+
+### Arquitectura (3 capas)
+
+| Capa | Archivo |
+|---|---|
+| Presentación | `src/pages/laboratorio/GestionAnalisisLaboratorio.jsx`, `src/pages/medico/GestionConsultasMedico.jsx` |
+| Lógica y Seguridad | `api/laboratorio/editar-analisis.js`, `services/tecnicoLaboratorioService.js` (gestión de payload y subida a Storage) |
+| Datos | Supabase Storage (`bucket: laboratorio`) & Tabla `analisis_laboratorio` (columna `archivo_resultado`) |
+
+### Notas técnicas
+
+- La persistencia del archivo se maneja mediante Supabase Storage asegurando URLs públicas accesibles para la visualización directa del médico.
+- Se integró la lógica de actualización compatible con los flujos de la HU-15 (manejo de solicitudes de origen médico y técnico).
+- Requiere `vercel dev` para probarse en local de manera integrada con las Serverless Functions.
+
 
 ## Issue Nro 20: 

@@ -409,7 +409,7 @@ export default function GestionAnalisisLaboratorio() {
                           rel="noreferrer" 
                           className="text-xs text-blue-600 hover:underline inline-flex items-center gap-1"
                         >
-                          📄 Ver adjunto
+                          Ver adjunto
                         </a>
                       )}
                     </div>
@@ -616,7 +616,7 @@ export default function GestionAnalisisLaboratorio() {
                   rel="noreferrer"
                   className="whitespace-nowrap text-sm text-primary font-medium hover:underline flex items-center gap-1"
                 >
-                  📄 Ver adjunto actual
+                  Ver adjunto actual
                 </a>
               )}
             </div>
